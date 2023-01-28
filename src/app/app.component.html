@@ -1,1 +1,6 @@
-<div><h1>hola</h1></div>
+<h3 *ngIf="name">Tu nombre es: {{ name }}</h3>
+<input [(ngModel)]="name"/>
+
+<ul *ngFor="let c of countries">
+  <li>{{c}}</li>
+</ul>
