@@ -1,0 +1,11 @@
+<form action="">
+  <div class="">
+    <label for="newItem">New {{label}}</label>
+  </div>
+  <div class="">
+    <input type="text" id="newItem" #newItem>
+  </div>
+  <div class="">
+    <button (click)="onAddNewItem(newItem.value)" type="button" [ngClass]="[className]">Add {{label}}</button>
+  </div>
+</form>

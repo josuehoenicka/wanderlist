@@ -1,0 +1,31 @@
+form {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  color: #0077ff;
+  font-size: 1em;
+}
+
+input {
+  width: 70vh;
+  margin: 0 0.7em;
+  padding: 0.15em 0.7em;
+  border-radius: 2em;
+  border: 0.065em black solid;
+}
+
+button {
+  font-size: 0.7em;
+  padding: 0.7em;
+  border-radius: 2em;
+}
+
+.classname {
+  border: none;
+  background-color: #0077ff;
+  color: white;
+}

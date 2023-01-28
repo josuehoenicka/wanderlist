@@ -7,22 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  wanderlist = ['Caracas', 'Miranda', 'Nueva Esparta', 'Táchira', 'Cúcuta',
-  'Mérida', 'Roraima', 'Sao Paulo', 'Brasilia',
-  'Paraná', 'Misiones', 'Santa Fe', 'Buenos Aires']
-  title = 'countriesapp';
+  wanderlist = ['Venezuela', 'Colombia', 'Brasil', 'Argentina']
+  title = 'wanderlist';
   selection!: string;
 
-  onCityClicked(city: string) {
-    this.selection = city;
+  onCountryClicked(country: string) {
+    this.selection = country;
   }
 
-  onCity() {
+  onCountry() {
     this.selection = '';
   }
 
-  addNewCity(city: string) {
-    this.wanderlist.push(city);
+  addNewCountry(country: string) {
+    this.wanderlist.push(country);
   }
 
 }
