@@ -1,16 +1,16 @@
 <h3 *ngIf="name">Tu nombre es: {{ name }}</h3>
 <input [(ngModel)]="name"/>
 
-<ul *ngFor="let c of cities">
+<ul *ngFor="let wl of wanderlist">
   <!-- <li
   [ngStyle]="{'color': 'white', 'background-color': c.country === 'Venezuela' ? '#a02b2b' : '#0077ff' }"
   >
   {{c.city}}
   </li> -->
   <li
-  (click)="onCityClicked(c.city)"
-  [ngClass]="{'selected': c.city === selection, 'disabled': c.city !== selection}"
-  >{{c.city}}</li>
+  (click)="onCityClicked(wl)"
+  [ngClass]="{'selected': wl === selection, 'disabled': wl !== selection}"
+  >{{wl}}</li>
 </ul>
 
 <div *ngIf="selection">

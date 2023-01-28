@@ -8,32 +8,9 @@ import { Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular
 export class AppComponent implements OnChanges, OnInit, OnDestroy {
 
   name!: string;
-  cities = [
-    {
-      country: 'Argentina',
-      city: 'Buenos Aires'
-    },
-    {
-      country: 'Argentina',
-      city: 'Rosario'
-    },
-    {
-      country: 'Argentina',
-      city: 'Tandil'
-    },
-    {
-      country: 'Venezuela',
-      city: 'San Cristóbal'
-    },
-    {
-      country: 'Venezuela',
-      city: 'Caracas'
-    },
-    {
-      country: 'Venezuela',
-      city: 'Cumaná'
-    }
-  ]
+  wanderlist = ['Caracas (VEN)', 'Miranda (VEN)', 'Táchira (VEN)',
+  'Mérida(VEN)', 'Bolívar (VEN)', 'Roraima (BRA)', 'Sao Paulo (BRA)', 'Brasilia (BRA)',
+  'Paraná (BRA)', 'Misiones (ARG)', 'Santa Fe (ARG)', 'Buenos Aires (ARG)']
   title = 'countriesapp';
   selection!: string;
 
