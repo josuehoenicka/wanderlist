@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnChanges, OnInit, OnDestroy {
+
   name!: string;
   countries = [
     {
@@ -34,4 +35,16 @@ export class AppComponent {
     }
   ]
   title = 'countriesapp';
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('ngOnChanges ->', changes)
+  }
+
+  ngOnInit(): void {
+    console.log('OnInit ->')
+  }
+
+  ngOnDestroy(): void {
+  }
+
 }
