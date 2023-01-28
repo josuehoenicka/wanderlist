@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   name!: string;
   countries = ['Buenos Aires', 'Rosario', 'Tandil', 'San Cristóbal', 'Caracas', 'Charallave']
-  title = 'countryapp';
+  title = 'countriesapp';
 }
