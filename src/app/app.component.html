@@ -2,5 +2,12 @@
 <input [(ngModel)]="name"/>
 
 <ul *ngFor="let c of countries">
-  <li>{{c}}</li>
+  <li
+  [ngStyle]="{'color': 'white', 'background-color': c.country === 'Venezuela' ? '#a02b2b' : '#0077ff' }"
+  >
+  {{c.city}}
+  </li>
+  <!-- <li
+  [ngClass]="{'venezuela': c.country === 'Venezuela', 'argentina': c.country === 'Argentina'}"
+  >{{c.city}}</li> -->
 </ul>

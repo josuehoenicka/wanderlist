@@ -7,6 +7,31 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name!: string;
-  countries = ['Buenos Aires', 'Rosario', 'Tandil', 'San Cristóbal', 'Caracas', 'Charallave']
+  countries = [
+    {
+      country: 'Argentina',
+      city: 'Buenos Aires'
+    },
+    {
+      country: 'Argentina',
+      city: 'Rosario'
+    },
+    {
+      country: 'Argentina',
+      city: 'Tandil'
+    },
+    {
+      country: 'Venezuela',
+      city: 'San Cristóbal'
+    },
+    {
+      country: 'Venezuela',
+      city: 'Caracas'
+    },
+    {
+      country: 'Venezuela',
+      city: 'Cumaná'
+    }
+  ]
   title = 'countriesapp';
 }
