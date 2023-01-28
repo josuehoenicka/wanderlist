@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  name!: string;
   wanderlist = ['Caracas', 'Miranda', 'Nueva Esparta', 'Táchira', 'Cúcuta',
   'Mérida', 'Roraima', 'Sao Paulo', 'Brasilia',
   'Paraná', 'Misiones', 'Santa Fe', 'Buenos Aires']
@@ -20,6 +19,10 @@ export class AppComponent {
 
   onCity() {
     this.selection = '';
+  }
+
+  addNewCity(city: string) {
+    this.wanderlist.push(city);
   }
 
 }

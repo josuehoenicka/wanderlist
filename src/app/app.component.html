@@ -1,18 +1,13 @@
-<h3 *ngIf="name">Tu nombre es: {{ name }}</h3>
-<input [(ngModel)]="name"/>
-<ul *ngFor="let wl of wanderlist">
-  <!-- <li
-  [ngStyle]="{'color': 'white', 'background-color': c.country === 'Venezuela' ? '#a02b2b' : '#0077ff' }"
-  >
-  {{c.city}}
-  </li> -->
-  <li
-  (click)="onCityClicked(wl)"
-  [ngClass]="{'selected': wl === selection, 'disabled': wl !== selection}"
-  >{{wl}}</li>
-</ul>
-
-<div *ngIf="selection">
-  <p>Your city is: {{selection}}</p>
-  <app-button (click)="onCity()" [color]="'red'" [label]="'CLEAR CITY'"></app-button>
+<div class="container">
+  <ul>
+    <li *ngFor="let wl of wanderlist"
+    (click)="onCityClicked(wl)"
+    [ngClass]="{'selected': wl === selection, 'disabled': wl !== selection}"
+    >{{wl}}</li>
+  </ul>
+  <div *ngIf="selection">
+    <p>Your city is: {{selection}}</p>
+    <app-button (click)="onCity()" [color]="'red'" [label]="'CLEAR CITY'"></app-button>
+  </div>
 </div>
+
