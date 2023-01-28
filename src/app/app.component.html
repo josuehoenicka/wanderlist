@@ -1,13 +1,19 @@
 <h3 *ngIf="name">Tu nombre es: {{ name }}</h3>
 <input [(ngModel)]="name"/>
 
-<ul *ngFor="let c of countries">
-  <li
+<ul *ngFor="let c of cities">
+  <!-- <li
   [ngStyle]="{'color': 'white', 'background-color': c.country === 'Venezuela' ? '#a02b2b' : '#0077ff' }"
   >
   {{c.city}}
-  </li>
-  <!-- <li
-  [ngClass]="{'venezuela': c.country === 'Venezuela', 'argentina': c.country === 'Argentina'}"
-  >{{c.city}}</li> -->
+  </li> -->
+  <li
+  (click)="onCityClicked(c.city)"
+  [ngClass]="{'selected': c.city === selection, 'disabled': c.city !== selection}"
+  >{{c.city}}</li>
 </ul>
+
+<div *ngIf="selection">
+  <p>Your city is: {{selection}}</p>
+  <button (click)="onCity()">CLEAR CITY</button>
+</div>

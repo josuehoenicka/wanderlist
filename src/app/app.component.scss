@@ -1,10 +1,8 @@
-.argentina {
-  color: #0077ff;
-}
-.venezuela {
-  color: #a02b2b;
+.selected {
+  background-color: red;
+  opacity: 1;
 }
 
-.opac {
-  opacity: 0.5;
+.disabled {
+  opacity: 0.4;
 }

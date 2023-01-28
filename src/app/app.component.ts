@@ -8,7 +8,7 @@ import { Component, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular
 export class AppComponent implements OnChanges, OnInit, OnDestroy {
 
   name!: string;
-  countries = [
+  cities = [
     {
       country: 'Argentina',
       city: 'Buenos Aires'
@@ -35,6 +35,7 @@ export class AppComponent implements OnChanges, OnInit, OnDestroy {
     }
   ]
   title = 'countriesapp';
+  selection!: string;
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log('ngOnChanges ->', changes)
@@ -45,6 +46,14 @@ export class AppComponent implements OnChanges, OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+  }
+
+  onCityClicked(city: string) {
+    this.selection = city;
+  }
+
+  onCity() {
+    this.selection = '';
   }
 
 }
