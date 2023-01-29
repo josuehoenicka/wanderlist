@@ -1,17 +1,27 @@
 <div class="container">
   <header>
-    <app-form-new-item (newItemEvent)="addNewCountry($event)" [label]="'Country'" [className]="'classname'"></app-form-new-item>
+    <app-form-new-item
+    (newItemEvent)="addNewCountry($event)"
+    [label]="'Country'" [className]="'classname'">
+  </app-form-new-item>
   </header>
   <main>
     <ul>
-      <li *ngFor="let wl of wanderlist"
-      (click)="onCountryClicked(wl)"
-      [ngClass]="{'selected': wl === selection, 'disabled': wl !== selection}"
-      >{{wl}}</li>
+      <app-countries
+        *ngFor="let wl of wanderlist"
+        (countryClickedEvent)="onCountryClicked($event)"
+        [wl]="wl" [selection]="selection">
+      </app-countries>
     </ul>
+    <input type="text"
+      (keypress)="onSearch()"
+    >
     <div *ngIf="selection">
       <p>Your city is: {{selection}}</p>
-      <app-button (click)="onCountry()" [color]="'red'" [label]="'CLEAR COUNTRY'"></app-button>
+      <app-button
+        (click)="onCountry()"
+        [color]="'red'" [label]="'CLEAR COUNTRY'">
+      </app-button>
     </div>
   </main>
 </div>

@@ -6,6 +6,10 @@
     <input type="text" id="newItem" #newItem>
   </div>
   <div class="">
-    <button (click)="onAddNewItem(newItem.value)" type="button" [ngClass]="[className]">Add {{label}}</button>
+    <button type="button"
+      (click)="onAddNewItem(newItem.value)"
+      [ngClass]="[className]">
+      Add {{label}}
+    </button>
   </div>
 </form>

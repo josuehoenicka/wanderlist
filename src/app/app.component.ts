@@ -11,16 +11,20 @@ export class AppComponent {
   title = 'wanderlist';
   selection!: string;
 
-  onCountryClicked(country: string) {
+  onCountryClicked(country: string): void {
     this.selection = country;
   }
 
-  onCountry() {
+  onCountry(): void {
     this.selection = '';
   }
 
-  addNewCountry(country: string) {
+  addNewCountry(country: string): void {
     this.wanderlist.push(country);
+  }
+
+  onSearch(): void {
+    console.log('OnSearch')
   }
 
 }
