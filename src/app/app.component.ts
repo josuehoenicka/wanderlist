@@ -10,6 +10,7 @@ export class AppComponent {
   wanderlist = ['Venezuela', 'Colombia', 'Brasil', 'Argentina']
   title = 'wanderlist';
   selection!: string;
+  criterion = '';
 
   onCountryClicked(country: string): void {
     this.selection = country;

@@ -6,7 +6,7 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
       <li
         (click)="onCountryClicked(wl)"
         [ngClass]="{'selected': wl === selection, 'disabled': wl !== selection}">
-        {{wl}}
+        {{wl | titlecase}}
       </li>
   `,
   styleUrls: ['./countries.component.scss'],

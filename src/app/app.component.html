@@ -4,18 +4,18 @@
     (newItemEvent)="addNewCountry($event)"
     [label]="'Country'" [className]="'classname'">
   </app-form-new-item>
+  <div class="form-container">
+    <input type="text" class="form-control" placeholder="Filter..." [(ngModel)]="criterion"/>
+  </div>
   </header>
   <main>
     <ul>
       <app-countries
-        *ngFor="let wl of wanderlist"
+        *ngFor="let wl of (wanderlist | filter:criterion)"
         (countryClickedEvent)="onCountryClicked($event)"
         [wl]="wl" [selection]="selection">
       </app-countries>
     </ul>
-    <input type="text"
-      (keypress)="onSearch()"
-    >
     <div *ngIf="selection">
       <p>Your city is: {{selection}}</p>
       <app-button
