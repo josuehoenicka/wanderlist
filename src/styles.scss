@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Explora&display=swap');
+
 :root {
   --black: #000000;
   --white: #ffffff;
@@ -13,13 +16,11 @@
   user-select: none;
   background-color: var(--white);
   color: var(--black);
-  font-size: 1.1em;
-  font-family: monospace;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
   width: 100vw;
-  height: 100vh;
 }
 
 body::-webkit-scrollbar {

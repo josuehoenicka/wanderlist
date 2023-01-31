@@ -1,11 +1,11 @@
 <form action="">
-  <div class="">
+  <div class="label-container">
     <label for="newItem">New {{label}}</label>
   </div>
-  <div class="">
-    <input type="text" id="newItem" #newItem>
+  <div class="input-container">
+    <input type="text" id="newItem" #newItem autocomplete="off">
   </div>
-  <div class="">
+  <div class="button-container">
     <button type="button"
       (click)="onAddNewItem(newItem.value)"
       [ngClass]="[className]">

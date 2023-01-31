@@ -1,25 +1,37 @@
 form {
   display: flex;
   width: 100vw;
+  height: 20vh;
   justify-content: center;
   align-items: center;
 }
 
 label {
   color: #0077ff;
-  font-size: 1em;
+  font-size: 3.5em;
+  font-family: 'Explora', cursive;
+  font-weight: bold;
 }
 
 input {
   width: 70vh;
   margin: 0 0.7em;
   padding: 0.15em 0.7em;
-  border-radius: 2em;
-  border: 0.065em black solid;
+  font-size: 2.3em;
+  border: none;
+  outline: none;
+  border-bottom: 0.1em black solid;
+  transition: 0.8s ease-in-out;
+}
+
+input:focus {
+  outline: none;
+  transition: 0.4s ease-in;
+  border-bottom: 0.1em #0077ff solid;
 }
 
 button {
-  font-size: 0.7em;
+  font-size: 1.5em;
   padding: 0.7em;
   border-radius: 2em;
 }

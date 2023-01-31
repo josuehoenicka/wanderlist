@@ -1,0 +1,13 @@
+.form-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 2em;
+}
+
+button {
+  background-color: green;
+}
+
+button:disabled {
+  opacity: 0.3;
+}
