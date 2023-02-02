@@ -8,6 +8,7 @@ import { CountriesComponent } from './countries/countries.component';
 import { FilterPipe } from './pipes/filter.pipe';
 import { ContactComponent } from './contact/contact.component';
 import { ContactReactiveComponent } from './contact-reactive/contact-reactive.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ContactReactiveComponent } from './contact-reactive/contact-reactive.co
     CountriesComponent,
     FilterPipe,
     ContactComponent,
-    ContactReactiveComponent
+    ContactReactiveComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
