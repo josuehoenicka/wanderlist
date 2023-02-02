@@ -1,1 +1,36 @@
-<p>contact-reactive works!</p>
+<h1>Contact form</h1>
+<form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+  <div class="form-container">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" id="name" class="form-control" name="name" required formControlName="name"/>
+    <div class="alert" *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors?.['required']">This field is required</div>
+    <div class="alert" *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors?.['minlength']">Must be longer than 3 characters</div>
+  </div>
+  <div class="form-container">
+    <label for="checkAge" class="form-label">Are you over 13 years of age?</label>
+    <input type="checkbox" id="checkAge" class="form-control" name="checkAge" required formControlName="checkAge"/>
+    <div class="alert" *ngIf="contactForm.get('checkAge')?.touched && contactForm.get('checkAge')?.errors?.['required']">This field is required</div>
+    <!-- <div class="alert" [hidden]="checkAge.valid || checkAge.pristine">This field is required.</div> -->
+  </div>
+  <div class="form-container">
+    <label for="ocupation" class="form-label">Ocupation</label>
+    <select name="ocupation" id="ocupation" class="form-select" formControlName="ocupation">
+      <option selected></option>
+      <option value="Student">Student</option>
+      <option value="Worker">Employee</option>
+      <option value="Freelancer">Freelancer</option>
+      <option value="Others">Others</option>
+    </select>
+    <div class="alert" *ngIf="contactForm.get('ocupation')?.touched && contactForm.get('ocupation')?.errors?.['required']">This field is required</div>
+    <!-- <div class="alert" [hidden]="ocupation.valid || ocupation.pristine">This field is required.</div> -->
+  </div>
+  <div class="form-container">
+    <label for="comment" class="form-label">Comment</label>
+    <textarea name="comment" id="comment"  class="form-control" rows="4" placeholder="Message" required formControlName="comment"></textarea>
+    <div class="alert" *ngIf="contactForm.get('comment')?.touched && contactForm.get('comment')?.errors?.['maxlength']">Must be shorted than 300 characters</div>
+    <!-- <div class="alert" [hidden]="comment.valid || comment.pristine">This field is required.</div> -->
+  </div>
+  <div class="form-container button-container">
+    <button type="submit" [disabled]="contactForm.invalid">SEND</button>
+  </div>
+</form>
