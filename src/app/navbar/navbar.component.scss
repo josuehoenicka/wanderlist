@@ -1,0 +1,28 @@
+* {
+  background-color: #0077ff;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  h1 {
+    font-size: 4em;
+    font-family: 'Explora', cursive;
+    padding: 0em 0.25em;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    padding: 1em 0.5em;
+    li {
+      font-size: 1.3em;
+      margin: 0 1em;
+    }
+  }
+}
+
+.active {
+  padding-bottom: 0.2em;
+  border-bottom: 0.1em white solid;
+}

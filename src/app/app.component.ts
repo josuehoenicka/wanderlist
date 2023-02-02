@@ -24,8 +24,4 @@ export class AppComponent {
     this.wanderlist.push(country);
   }
 
-  onSearch(): void {
-    console.log('OnSearch')
-  }
-
 }

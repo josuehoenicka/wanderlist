@@ -1,0 +1,60 @@
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 5em;
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .form-control {
+      width: 20em;
+      border: none;
+      outline: none;
+      border-bottom: 0.09em black solid;
+      font-size: 1.4em;
+      padding: 0.3em 0em;
+    }
+  }
+  .wanderlist-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    margin-top: 1em;
+  }
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10em;
+}
+
+main {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wanderlist {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  margin: 3em 0;
+  .wanderlist-countries {
+    margin: 0 3em;
+  }
+}
+
+.forms {
+  display: flex;
+  justify-content: space-between;
+}

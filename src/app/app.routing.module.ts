@@ -5,23 +5,10 @@ import { ContactComponent } from "./contact/contact.component";
 import { HomeComponent } from "./home/home.component";
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: '/home',
-    pathMatch: 'full'
-  },
-  {
-    path: 'contact-reactive',
-    component: ContactReactiveComponent
-  },
-  {
-    path: 'contact-template',
-    component: ContactComponent
-  },
-  {
-    path: 'home',
-    component: HomeComponent
-  },
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: 'contact-reactive', component: ContactReactiveComponent },
+  { path: 'contact-template', component: ContactComponent },
+  { path: 'home', component: HomeComponent },
 ];
 
 @NgModule({
