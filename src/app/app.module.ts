@@ -11,6 +11,10 @@ import { ContactReactiveComponent } from './contact-reactive/contact-reactive.co
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app.routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { UserComponent } from './users/user/user.component';
+import { DetailsComponent } from './users/details/details.component';
+import { ListComponent } from './users/list/list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { NavbarComponent } from './navbar/navbar.component';
     ContactComponent,
     ContactReactiveComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    PagenotfoundComponent,
+    UserComponent,
+    DetailsComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,
