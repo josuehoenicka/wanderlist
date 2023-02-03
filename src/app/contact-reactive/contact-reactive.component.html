@@ -16,10 +16,7 @@
     <label for="ocupation" class="form-label">Ocupation</label>
     <select name="ocupation" id="ocupation" class="form-select" formControlName="ocupation">
       <option selected></option>
-      <option value="Student">Student</option>
-      <option value="Worker">Employee</option>
-      <option value="Freelancer">Freelancer</option>
-      <option value="Others">Others</option>
+      <option *ngFor="let ocup of ocupation" [value]="ocup">{{ocup}}</option>
     </select>
     <div class="alert" *ngIf="contactForm.get('ocupation')?.touched && contactForm.get('ocupation')?.errors?.['required']">This field is required</div>
     <!-- <div class="alert" [hidden]="ocupation.valid || ocupation.pristine">This field is required.</div> -->

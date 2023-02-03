@@ -9,13 +9,15 @@ import { ActivatedRoute, Params } from '@angular/router';
 })
 export class ContactReactiveComponent implements OnInit {
 
-  contactForm!: FormGroup
+  ocupation:string[] = [];
+  contactForm!: FormGroup;
   name!: string;
   // myField = new FormControl();
   constructor(private readonly fb:FormBuilder,
      private readonly route: ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.ocupation = this.route.snapshot.data['ocupation']
     this.route.queryParams
     .subscribe(
       (params: Params) => {
