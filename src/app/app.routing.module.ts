@@ -16,10 +16,10 @@ const routes: Routes = [
   { path: 'contact-reactive', loadChildren: () =>
     import('./contact-reactive/contact-reactive.module').then(m => m.ContactReactiveModule)
   },
-  { path: 'contact-template/:id', component: ContactComponent,
+  { path: 'contact-template', component: ContactComponent,
     resolve: {ocupation: DataResolverService}
   },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent},
   { path: 'users', component: UserComponent, canActivate: [PermissionsGuard],
     children:[
       { path: 'list', component: ListComponent },

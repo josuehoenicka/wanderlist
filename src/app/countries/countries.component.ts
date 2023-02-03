@@ -3,11 +3,12 @@ import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from 
 @Component({
   selector: 'app-countries',
   template: `
-      <li
-        (click)="onCountryClicked(wl)"
-        [ngClass]="{'selected': wl === selection, 'disabled': wl !== selection}">
-        {{wl | titlecase}}
-      </li>
+      <ul class="wanderlist-countries">
+        <li (click)="onCountryClicked(wl)" [ngClass]="{'selected': wl === selection, 'disabled': wl !== selection}">
+          {{wl | titlecase}}
+        </li>
+        <button type="button" class="btn-delete">Delete</button>
+      </ul>
   `,
   styleUrls: ['./countries.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

@@ -7,21 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  wanderlist = ['Venezuela', 'Colombia', 'Brasil', 'Argentina']
-  title = 'wanderlist';
-  selection!: string;
-  criterion = '';
-
-  onCountryClicked(country: string): void {
-    this.selection = country;
-  }
-
-  onCountry(): void {
-    this.selection = '';
-  }
-
-  addNewCountry(country: string): void {
-    this.wanderlist.push(country);
-  }
-
 }
