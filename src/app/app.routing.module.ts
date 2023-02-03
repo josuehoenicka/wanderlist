@@ -13,8 +13,8 @@ import { UserComponent } from "./users/user/user.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
-  { path: 'contact-reactive', component: ContactReactiveComponent, canDeactivate:[WithoutsaveGuard],
-    resolve: {ocupation: DataResolverService}
+  { path: 'contact-reactive', loadChildren: () =>
+    import('./contact-reactive/contact-reactive.module').then(m => m.ContactReactiveModule)
   },
   { path: 'contact-template/:id', component: ContactComponent,
     resolve: {ocupation: DataResolverService}
