@@ -3,17 +3,19 @@ ul {
   justify-content: space-between;
   align-items: center;
   width: 20em;
-}
-
-li {
-  margin: 0.5em;
-  font-size: 2em;
-}
-
-button {
-  padding: 0.5em;
-}
-
-.wanderlist-countries {
   margin: 0 3em;
+  li {
+    margin: 0.5em;
+    font-size: 2em;
+  }
+  button {
+    padding: 0.5em;
+    background-color: #fd0000;
+    border: none;
+    color: white;
+    border-radius: 2em;
+    font-size: 1em;
+    padding: 0.5em 1em;
+  }
 }
+

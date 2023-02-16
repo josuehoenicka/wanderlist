@@ -27,6 +27,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .selected {
   opacity: 1;
   font-weight: bold;

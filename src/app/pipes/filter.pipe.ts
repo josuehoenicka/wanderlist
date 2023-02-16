@@ -10,7 +10,7 @@ export class FilterPipe implements PipeTransform {
     let result: string[] = []
     for(let v of value){
       if(v.toLowerCase().indexOf(arg.toLowerCase()) > -1) {
-        result = [...result, v]
+        result = [v]
       }
     }
     return result;
