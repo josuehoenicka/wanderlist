@@ -2,27 +2,39 @@
   <header>
     <app-form-new-item
       (newItemEvent)="addNewCountry($event)"
-      [label]="'Country'" [className]="'classname'">
+      [label]="'Country'"
+      [className]="'classname'"
+    >
     </app-form-new-item>
   </header>
   <main>
     <div class="wanderlist">
       <ul class="wanderlist-countries">
         <app-countries
-          *ngFor="let wl of (wanderlist | filter:criterion)"
+          *ngFor="let wl of wanderlist | filter : criterion"
           (countryClickedEvent)="onCountryClicked($event)"
-          [wl]="wl" [selection]="selection">
+          (deleteClickedEvent)="onDeleteCountry($event)"
+          [wl]="wl"
+          [selection]="selection"
+        >
         </app-countries>
       </ul>
       <aside>
         <div class="form-container">
-          <input type="text" class="form-control" placeholder="Search Country" [(ngModel)]="criterion"/>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Search Country"
+            [(ngModel)]="criterion"
+          />
         </div>
         <div *ngIf="selection" class="wanderlist-options">
-          <p>You're traveling in {{selection}}!</p>
+          <p>You're traveling in {{ selection }}!</p>
           <app-button
             (click)="onCountry()"
-            [color]="'red'" [label]="'CLEAR COUNTRY'">
+            [color]="'red'"
+            [label]="'CLEAR COUNTRY'"
+          >
           </app-button>
         </div>
       </aside>
